@@ -1,10 +1,9 @@
-package com.example.lab4_2
+package com.example.lab3_2
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.lab4_2.databinding.Activity1Binding
-import com.example.lab4_2.databinding.Activity2Binding
+import com.example.lab3_2.databinding.Activity2Binding
 
 class Activity2 : AppCompatActivity() {
     companion object {

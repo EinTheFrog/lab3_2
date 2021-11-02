@@ -1,31 +1,30 @@
-package com.example.lab4_2
+package com.example.lab3_2
 
 import android.content.Intent
-import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.lab4_2.databinding.Activity3Binding
+import android.os.Bundle
+import com.example.lab3_2.databinding.Activity1Binding
 
-class Activity3 : AppCompatActivity() {
+
+class Activity1 : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding = Activity3Binding.inflate(layoutInflater)
+        val binding = Activity1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.btnToSecond.setOnClickListener {
-            setResult(2)
-            finish()
+            goToSecond()
         }
-
-        binding.btnToFirst.setOnClickListener {
-            setResult(1)
-            finish()
-        }
-
         binding.btnToAbout.setOnClickListener {
             goToAbout()
         }
+    }
+
+    private fun goToSecond() {
+        val intent = Intent(this, Activity2::class.java)
+        startActivity(intent)
     }
 
     private fun goToAbout() {
