@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Lab3_2" >
 
         <activity
-            android:name="com.example.lab3_2.Activity1"
+            android:name="com.example.lab3_2.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

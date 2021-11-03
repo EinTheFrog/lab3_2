@@ -3,21 +3,21 @@ package com.example.lab3_2
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.lab3_2.databinding.Activity1Binding
+import com.example.lab3_2.databinding.Fragment1Binding
 
 
-class Activity1 : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val binding = Activity1Binding.inflate(layoutInflater)
+        val binding = Fragment1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnToSecond.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             goToSecond()
         }
-        binding.btnToAbout.setOnClickListener {
+        binding.bnToAbout.setOnClickListener {
             goToAbout()
         }
     }

@@ -4,39 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity2">
+    tools:context=".MainActivity"
+    android:id="@+id/drawer_layout">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/fragment1">
 
         <TextView
             android:id="@+id/topText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/activity_2"
+            android:text="@string/activity_1"
             android:textSize="20sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
 
         <Button
-            android:id="@+id/btnToFirst"
+            android:id="@+id/bnToSecond"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/to_first"
+            android:text="@string/to_second"
             app:layout_constraintTop_toBottomOf="@id/topText"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
-
-        <Button
-            android:id="@+id/btnToThird"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/to_third"
-            app:layout_constraintTop_toBottomOf="@id/btnToFirst"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
@@ -55,12 +47,11 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btnToAbout"
+                android:id="@+id/bnToAbout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/to_about"
                 android:layout_gravity="center" />
         </LinearLayout>
     </com.google.android.material.navigation.NavigationView>
-
 </androidx.drawerlayout.widget.DrawerLayout>
