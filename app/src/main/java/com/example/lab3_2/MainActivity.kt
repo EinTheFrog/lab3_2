@@ -3,6 +3,10 @@ package com.example.lab3_2
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.*
+import androidx.navigation.ui.R
 import com.example.lab3_2.databinding.Fragment1Binding
 
 
@@ -18,6 +22,7 @@ class MainActivity : AppCompatActivity() {
             goToSecond()
         }
         binding.bnToAbout.setOnClickListener {
+            binding.drawerLayout.closeDrawers()
             goToAbout()
         }
     }
@@ -30,5 +35,10 @@ class MainActivity : AppCompatActivity() {
     private fun goToAbout() {
         val intent = Intent(this, ActivityAbout::class.java)
         startActivity(intent)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

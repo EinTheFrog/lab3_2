@@ -23,6 +23,7 @@ class Activity3 : AppCompatActivity() {
         }
 
         binding.bnToAbout.setOnClickListener {
+            binding.drawerLayout.closeDrawers()
             goToAbout()
         }
     }

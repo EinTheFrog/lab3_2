@@ -7,12 +7,11 @@ import com.example.lab3_2.databinding.ActivityAboutBinding
 class ActivityAbout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_about)
+    }
 
-        val binding = ActivityAboutBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        binding.btnBack.setOnClickListener {
-            finish()
-        }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
